@@ -1,13 +1,79 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #45aaf2;
+}
+.App {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.calculator {
+  width: 100%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 11px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 11px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 11px -4px rgba(0, 0, 0, 0.75);
+}
+.calcScreen {
+  padding: 12px;
+  text-align: right;
+  background-color: #4b6584;
+  color: #d1d8e0;
+  font-weight: 300;
+  font-size: 28px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* global */
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #a5b1c2;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button:hover {
+  opacity: 0.9;
+}
+
+/* calc operator buttons */
+.calcOperators {
+  display: flex;
+}
+.calcOperators button {
+  flex: 1 1 0%;
+  background-color: #f7b731;
+  color: #4b6584;
+  font-weight: 600;
+}
+
+/* calc digit buttons */
+.calcDigits {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calcDigits button {
+  flex: 1 1 33.333%;
+  background-color: #4b6584;
+  color: #fff;
+  font-weight: 600;
+}
+
+.calcDigits button:last-child {
+  background-color: #f7b731;
+  color: #4b6584;
+  font-weight: bolder;
 }
